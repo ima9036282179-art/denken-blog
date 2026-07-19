@@ -1,0 +1,154 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+
+const posts = await getCollection('blog');
+const totalPosts = posts.length;
+const categories = [...new Set(posts.map(p => p.data.category).filter(Boolean))];
+---
+
+<BaseLayout
+  title="運営者情報"
+  description="電験ロードナビの運営者情報。電気主任技術者の資格取得から、資格を活かした転職までをサポートする情報を発信しています。"
+>
+  <article class="about-page">
+
+    <header class="about-header">
+      <p class="about-eyecatch-label">⚡ 電験ロードナビ について</p>
+      <h1 class="about-title">電験合格から、<br>資格を活かした仕事につくまでを</h1>
+    </header>
+
+    <div class="about-profile-block">
+      <div class="about-avatar-icon">⚡</div>
+      <div class="about-profile-body">
+        <p class="about-profile-name">電験ロードナビ 運営部</p>
+        <p class="about-profile-tag">電気主任技術者（電験）専門の情報メディア</p>
+        <p class="about-profile-desc">ビル管理・工場設備管理など電気主任技術者が活躍する現場の情報をもとに、試験の勉強法・難易度、資格を活かした転職の進め方、年収相場を実務目線でわかりやすく解説しています。</p>
+      </div>
+    </div>
+
+    <div class="about-stats">
+      <div class="about-stat">
+        <p class="stat-num">{totalPosts}<span class="stat-unit">本</span></p>
+        <p class="stat-label">公開記事数</p>
+      </div>
+      <div class="about-stat">
+        <p class="stat-num">{categories.length}<span class="stat-unit">種</span></p>
+        <p class="stat-label">カテゴリ</p>
+      </div>
+      <div class="about-stat">
+        <p class="stat-num">電験<span class="stat-unit"></span></p>
+        <p class="stat-label">特化ジャンル</p>
+      </div>
+      <div class="about-stat">
+        <p class="stat-num">実務<span class="stat-unit">目線</span></p>
+        <p class="stat-label">執筆方針</p>
+      </div>
+    </div>
+
+    <section class="about-section">
+      <h2>このメディアのミッション</h2>
+      <p>電気主任技術者（電験）は、独学での取得を目指す人が多い一方で、「何から勉強すればいいのか」「合格したあと、実際にどんな仕事に就けるのか」といった、勉強の先にある道筋が見えにくい資格です。</p>
+      <p>このメディアは、<strong>「資格取得はゴールではなく、通過点」</strong>という考え方のもと、勉強法から転職・キャリア形成までを一本の道としてつなげて解説することを目的にしています。</p>
+    </section>
+
+    <section class="about-section">
+      <h2>このサイトで読めること</h2>
+      <div class="about-contents-grid">
+        <div class="about-content-card">
+          <span class="content-icon">📝</span>
+          <p class="content-title">資格・試験</p>
+          <p class="content-desc">電験三種・二種・一種の難易度、合格率、制度の基礎知識</p>
+        </div>
+        <div class="about-content-card">
+          <span class="content-icon">📚</span>
+          <p class="content-title">勉強法・独学</p>
+          <p class="content-desc">合格までの学習ロードマップ、独学と通信講座の比較</p>
+        </div>
+        <div class="about-content-card">
+          <span class="content-icon">🧭</span>
+          <p class="content-title">転職・キャリア</p>
+          <p class="content-desc">資格を活かせる職種、転職活動の進め方</p>
+        </div>
+        <div class="about-content-card">
+          <span class="content-icon">💰</span>
+          <p class="content-title">年収・待遇</p>
+          <p class="content-desc">資格手当の相場、年収の目安</p>
+        </div>
+        <div class="about-content-card">
+          <span class="content-icon">🏭</span>
+          <p class="content-title">現場のリアル</p>
+          <p class="content-desc">ビル管理・工場設備管理など、実際の仕事内容と働き方</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <h2>編集ポリシー</h2>
+      <blockquote>
+        「合格して終わり」ではなく、<br>「その先の仕事」まで見据えて書く。
+      </blockquote>
+      <p>当サイトは広告・アフィリエイトによって運営されていますが、紹介の順序や評価は、報酬額ではなく<strong>読者にとっての有用性</strong>を基準にしています。デメリットや向かない人の条件も明記し、読者が自分で判断できる材料を提供します。</p>
+    </section>
+
+    <section class="about-section">
+      <h2>運営・技術について</h2>
+      <p>当サイトは <a href="https://astro.build/" target="_blank" rel="noopener">Astro</a> で構築し、GitHub Pages で公開しています。表示速度とアクセシビリティを重視した静的サイトです。ご意見・ご指摘は<a href={`${base}contact/`}>お問い合わせ</a>からお気軽にどうぞ。</p>
+    </section>
+
+    <section class="about-section">
+      <h2>リンク</h2>
+      <div class="about-links">
+        <a href={`${base}rss.xml`} class="about-link-btn">📡 RSSフィードで購読する</a>
+        <a href={`${base}privacy/`} class="about-link-btn-sub">プライバシーポリシー・免責事項</a>
+      </div>
+    </section>
+
+    <div class="about-back">
+      <a href={base} class="series-btn">← 記事一覧へ戻る</a>
+    </div>
+  </article>
+</BaseLayout>
+
+<style is:global>
+.about-page { max-width: 720px; margin: 0 auto; padding: 2rem 0 4rem; }
+.about-header { margin-bottom: 2rem; }
+.about-eyecatch-label { font-size: 0.85rem; color: var(--accent); font-weight: 700; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+.about-title { font-size: 1.9rem; font-weight: 900; margin: 0; color: var(--text); line-height: 1.4; }
+.about-profile-block { display: flex; align-items: flex-start; gap: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; margin-bottom: 2rem; }
+.about-avatar-icon { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #0B1220, #2563EB); display: flex; align-items: center; justify-content: center; font-size: 2rem; flex-shrink: 0; border: 3px solid var(--accent); }
+.about-profile-body { display: flex; flex-direction: column; gap: 0.3rem; }
+.about-profile-name { font-weight: 900; font-size: 1.1rem; margin: 0; }
+.about-profile-tag { font-size: 0.78rem; color: var(--accent); font-weight: 700; margin: 0; }
+.about-profile-desc { font-size: 0.88rem; color: var(--text-muted); margin: 0; line-height: 1.7; }
+.about-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin-bottom: 2.5rem; }
+.about-stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 1rem; text-align: center; }
+.stat-num { font-size: 1.6rem; font-weight: 900; color: var(--accent); margin: 0 0 0.2rem; line-height: 1; }
+.stat-unit { font-size: 0.9rem; }
+.stat-label { font-size: 0.72rem; color: var(--text-muted); margin: 0; }
+.about-section { margin-bottom: 2.5rem; border-bottom: 1px solid var(--border); padding-bottom: 2rem; }
+.about-section:last-of-type { border-bottom: none; }
+.about-section h2 { font-size: 1.15rem; font-weight: 900; border-left: 4px solid var(--accent); padding-left: 0.85rem; margin: 0 0 1rem; color: var(--text); }
+.about-section p { line-height: 1.85; color: var(--text); margin-bottom: 0.8rem; font-size: 0.95rem; }
+.about-section p:last-child { margin-bottom: 0; }
+.about-section a { color: var(--accent); }
+.about-section blockquote { border-left: 4px solid var(--accent); background: var(--bg-card); padding: 1rem 1.25rem; border-radius: 0 10px 10px 0; font-size: 1rem; margin: 0 0 1rem; color: var(--text); line-height: 1.7; font-weight: 700; }
+.about-contents-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+.about-content-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 1rem 1.1rem; }
+.content-icon { font-size: 1.4rem; }
+.content-title { font-size: 0.9rem; font-weight: 700; color: var(--text); margin: 0.3rem 0 0.3rem; }
+.content-desc { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; margin: 0; }
+.about-links { display: flex; flex-direction: column; gap: 0.6rem; }
+.about-link-btn { display: block; text-align: center; padding: 0.8rem; background: linear-gradient(135deg, #0B1220, #2563EB); color: #fff; border-radius: 10px; font-weight: 700; font-size: 0.9rem; text-decoration: none; transition: opacity 0.15s; }
+.about-link-btn:hover { opacity: 0.88; color: #fff; }
+.about-link-btn-sub { display: block; text-align: center; padding: 0.6rem; border: 1px solid var(--border); border-radius: 10px; color: var(--text-muted); font-size: 0.82rem; text-decoration: none; transition: border-color 0.15s; }
+.about-link-btn-sub:hover { border-color: var(--accent); color: var(--accent); }
+.about-back { margin-top: 2.5rem; text-align: center; }
+@media (max-width: 600px) {
+  .about-title { font-size: 1.5rem; }
+  .about-stats { grid-template-columns: repeat(2, 1fr); }
+  .about-contents-grid { grid-template-columns: 1fr; }
+  .about-profile-block { flex-direction: column; align-items: center; text-align: center; }
+}
+</style>
