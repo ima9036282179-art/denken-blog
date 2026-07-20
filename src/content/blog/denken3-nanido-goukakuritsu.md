@@ -174,4 +174,12 @@ eyecatch: "/denken-blog/images/eyecatch/goukakuritsu.svg"
 
 次は、実際にどう学習を進めればいいのか——独学での勉強法とスケジュールの立て方を見ていきましょう。
 
+<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;margin:1.5rem 0;">
+<span style="display:inline-block;background:var(--accent-warm);color:#fff;font-size:0.65rem;font-weight:700;padding:0.15em 0.6em;border-radius:4px;margin:0 0 0.6rem;letter-spacing:0.05em;">PR</span>
+<p style="font-weight:700;margin:0 0 0.5rem;font-size:1rem;">📝 難関資格だからこそ、一人で抱え込まない</p>
+<p style="font-size:0.88rem;color:var(--text-muted);margin:0 0 0.9rem;line-height:1.7;">科目合格制度をうまく使っても、独学だけでは心が折れそうになる場面があります。電験三種に特化したオンライン講座「資格合格支援スクール【能セン】」で、基礎からのサポート体制を確認してみるのも一つの選択肢です。</p>
+<a href="https://px.a8.net/svt/ejp?a8mat=4B84X1+2QU322+5TS8+5YJRM" rel="nofollow sponsored noopener" target="_blank" style="display:inline-block;background:var(--accent-warm);color:#fff;padding:0.5rem 1.2rem;border-radius:8px;font-size:0.85rem;font-weight:700;text-decoration:none;margin:0.2rem;">資格合格支援スクール【能セン】を見る →</a>
+<img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=4B84X1+2QU322+5TS8+5YJRM" alt="">
+</div>
+
 <p style="font-size:0.75rem;color:var(--text-muted);margin-top:1.5rem;">※本記事はアフィリエイトプログラムを利用しています。掲載内容は執筆時点の情報であり、最新の条件は各公式サイトをご確認ください。</p>
