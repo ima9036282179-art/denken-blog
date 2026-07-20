@@ -4,6 +4,7 @@ description: "電気主任技術者（電験三種・二種・一種）の年収
 pubDate: 2026-07-05
 category: "年収・待遇"
 tags: ["年収・待遇", "電験三種", "資格手当", "年収", "電気主任技術者"]
+eyecatch: "/denken-blog/images/eyecatch/nenshu.svg"
 ---
 
 「電験三種を取ると、実際どれくらい年収が上がるのか」——資格取得を検討するうえで、多くの人が気になるポイントです。

@@ -4,6 +4,7 @@ description: "電験三種（第三種電気主任技術者試験）の難易度
 pubDate: 2026-06-07
 category: "資格・試験"
 tags: ["資格・試験", "電験三種", "難易度", "合格率", "第三種電気主任技術者"]
+eyecatch: "/denken-blog/images/eyecatch/goukakuritsu.svg"
 ---
 
 「電験三種って、そんなに難しいの？」——資格の勉強を始める前に、多くの人がまず抱く疑問です。

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1220"/>
+      <stop offset="45%" stop-color="#102A5C"/>
+      <stop offset="100%" stop-color="#1E3A8A"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="15%" cy="25%" r="55%">
+      <stop offset="0%" stop-color="#60A5FA" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#60A5FA" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="88%" cy="70%" r="60%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#2563EB" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="70" height="70" patternUnits="userSpaceOnUse">
+      <path d="M 70 0 L 0 0 0 70" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="700" fill="url(#bg)"/>
+  <rect width="1600" height="700" fill="url(#grid)"/>
+  <rect width="1600" height="700" fill="url(#glow1)"/>
+  <rect width="1600" height="700" fill="url(#glow2)"/>
+  <text x="220" y="480" font-size="420" font-family="'Noto Serif JP', serif" fill="#60A5FA" fill-opacity="0.06" text-anchor="middle">電</text>
+
+  <circle cx="130" cy="130" r="50" fill="#0B1220" fill-opacity="0.3"/>
+  <text x="130" y="150" font-size="50" text-anchor="middle">📚</text>
+
+  <g transform="translate(1180,380)">
+    <path d="M -260,100 C -140,100 -120,-100 0,-100 C 120,-100 100,80 220,40" fill="none" stroke="#93C5FD" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 26"/>
+    <circle cx="-260" cy="100" r="18" fill="#60A5FA"/>
+    <circle cx="0" cy="-100" r="18" fill="#93C5FD"/>
+    <circle cx="220" cy="40" r="22" fill="#DBEAFE"/>
+    <line x1="220" y1="40" x2="220" y2="-70" stroke="#DBEAFE" stroke-width="7" stroke-linecap="round"/>
+    <path d="M220,-70 L282,-52 L220,-34 Z" fill="#DBEAFE"/>
+  </g>
+</svg>
