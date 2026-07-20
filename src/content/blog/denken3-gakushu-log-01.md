@@ -29,6 +29,13 @@ eyecatch: "/denken-blog/images/eyecatch/gakushu-log-01.svg"
 
 <p style="text-align:center;font-size:0.78rem;color:var(--text-muted);margin-top:-1.25rem;">実際に使っている教材。理論・電力・機械・法規が科目別・テーマ別に分類されている一冊です。</p>
 
+<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;margin:1.5rem 0;text-align:center;">
+<span style="display:inline-block;background:var(--accent-warm);color:#fff;font-size:0.65rem;font-weight:700;padding:0.15em 0.6em;border-radius:4px;margin:0 0 0.6rem;letter-spacing:0.05em;">PR</span>
+<p style="font-weight:700;margin:0 0 0.5rem;font-size:0.95rem;">📖 実際に使っているのはこの一冊です</p>
+<p style="font-size:0.85rem;color:var(--text-muted);margin:0 0 0.9rem;line-height:1.7;">16年分の過去問が科目別・テーマ別に整理されていて、独学でも取り組みやすい構成になっています。</p>
+<a href="https://www.amazon.co.jp/dp/4274504484?tag=ima3burukku2-22" rel="nofollow sponsored noopener" target="_blank" style="display:inline-block;background:var(--accent-warm);color:#fff;padding:0.5rem 1.2rem;border-radius:8px;font-size:0.85rem;font-weight:700;text-decoration:none;">「電験三種問題の徹底研究」をAmazonで見る →</a>
+</div>
+
 このサイトの他の記事でも紹介している通り、電験三種の学習は「理論→電力・機械→法規」の順番が基本とされています。理論はすべての科目の土台になる科目だと知っていたので、素直にそこから手をつけることにしました。
 
 ---
