@@ -62,4 +62,12 @@ eyecatch: "/denken-blog/images/eyecatch/gakushu-log-01.svg"
 
 このログは、今後も学習の進捗に合わせて更新していく予定です。順調に進んだ話だけでなく、つまずいた話も含めて、できるだけ正直に記録していこうと思います。同じように独学で電験三種に挑戦している方の、何かの参考になれば嬉しいです。
 
-<p style="font-size:0.75rem;color:var(--text-muted);margin-top:1.5rem;">※本記事は運営者自身の個人的な学習記録です。学習方法や感じ方には個人差があります。</p>
+<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;margin:1.5rem 0;">
+<span style="display:inline-block;background:var(--accent-warm);color:#fff;font-size:0.65rem;font-weight:700;padding:0.15em 0.6em;border-radius:4px;margin:0 0 0.6rem;letter-spacing:0.05em;">PR</span>
+<p style="font-weight:700;margin:0 0 0.5rem;font-size:1rem;">✍️ 独学のペースに不安を感じたら</p>
+<p style="font-size:0.88rem;color:var(--text-muted);margin:0 0 0.9rem;line-height:1.7;">運営者は独学で進めていますが、「一人だと続かなそう」という人は、電験三種に特化したオンライン講座「資格合格支援スクール【能セン】」も選択肢の一つです。</p>
+<a href="https://px.a8.net/svt/ejp?a8mat=4B84X1+2QU322+5TS8+5YJRM" rel="nofollow sponsored noopener" target="_blank" style="display:inline-block;background:var(--accent-warm);color:#fff;padding:0.5rem 1.2rem;border-radius:8px;font-size:0.85rem;font-weight:700;text-decoration:none;margin:0.2rem;">資格合格支援スクール【能セン】を見る →</a>
+<img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=4B84X1+2QU322+5TS8+5YJRM" alt="">
+</div>
+
+<p style="font-size:0.75rem;color:var(--text-muted);margin-top:1.5rem;">※本記事は運営者自身の個人的な学習記録です。アフィリエイトプログラムを利用しています。学習方法や感じ方には個人差があります。</p>

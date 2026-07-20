@@ -63,4 +63,12 @@ eyecatch: "/denken-blog/images/eyecatch/column-jimi-tegatai.svg"
 
 それでも、「この資格に何百時間もかける意味があるのか」と迷っている誰かにとって、少しでも判断の材料になれば——そんな気持ちで、このコラムを綴りました。
 
-<p style="font-size:0.75rem;color:var(--text-muted);margin-top:1.5rem;">※本記事は運営者の個人的な所感・意見をまとめたコラムです。客観的なデータに基づく解説は、他の記事もあわせてご覧ください。</p>
+<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;margin:1.5rem 0;">
+<span style="display:inline-block;background:var(--accent-warm);color:#fff;font-size:0.65rem;font-weight:700;padding:0.15em 0.6em;border-radius:4px;margin:0 0 0.6rem;letter-spacing:0.05em;">PR</span>
+<p style="font-weight:700;margin:0 0 0.5rem;font-size:1rem;">💬 「地味だが手堅い」資格に、本気で向き合うなら</p>
+<p style="font-size:0.88rem;color:var(--text-muted);margin:0 0 0.9rem;line-height:1.7;">電験三種に特化したオンライン講座「資格合格支援スクール【能セン】」で、基礎からのサポート体制を確認してみるのも一つの選択肢です。</p>
+<a href="https://px.a8.net/svt/ejp?a8mat=4B84X1+2QU322+5TS8+5YJRM" rel="nofollow sponsored noopener" target="_blank" style="display:inline-block;background:var(--accent-warm);color:#fff;padding:0.5rem 1.2rem;border-radius:8px;font-size:0.85rem;font-weight:700;text-decoration:none;margin:0.2rem;">資格合格支援スクール【能セン】を見る →</a>
+<img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=4B84X1+2QU322+5TS8+5YJRM" alt="">
+</div>
+
+<p style="font-size:0.75rem;color:var(--text-muted);margin-top:1.5rem;">※本記事は運営者の個人的な所感・意見をまとめたコラムです。アフィリエイトプログラムを利用しています。客観的なデータに基づく解説は、他の記事もあわせてご覧ください。</p>
