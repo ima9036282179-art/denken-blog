@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460">
+  <rect width="800" height="460" fill="#F8FAFC"/>
+  <rect x="0.5" y="0.5" width="799" height="459" fill="none" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- origin -->
+  <circle cx="360" cy="260" r="7" fill="#0F172A"/>
+
+  <!-- v: thumb, horizontal right -->
+  <line x1="360" y1="260" x2="560" y2="260" stroke="#1D4ED8" stroke-width="10" stroke-linecap="round"/>
+  <polygon points="552,244 588,260 552,276" fill="#1D4ED8"/>
+  <text x="600" y="270" font-size="30" font-weight="900" fill="#1D4ED8">v（速度）</text>
+  <text x="500" y="240" font-size="18" fill="#1D4ED8">親指</text>
+
+  <!-- B: index finger, vertical up -->
+  <line x1="360" y1="260" x2="360" y2="80" stroke="#2563EB" stroke-width="10" stroke-linecap="round"/>
+  <polygon points="344,88 360,52 376,88" fill="#2563EB"/>
+  <text x="375" y="70" font-size="30" font-weight="900" fill="#2563EB">B（磁束密度）</text>
+  <text x="300" y="150" font-size="18" fill="#2563EB">人差し指</text>
+
+  <!-- e: middle finger, diagonal toward viewer -->
+  <line x1="360" y1="260" x2="180" y2="380" stroke="#0F172A" stroke-width="10" stroke-linecap="round"/>
+  <polygon points="168,358 148,398 192,392" fill="#0F172A"/>
+  <text x="60" y="420" font-size="30" font-weight="900" fill="#0F172A">e（起電力）</text>
+  <text x="250" y="330" font-size="18" fill="#0F172A">中指</text>
+
+  <text x="400" y="440" font-size="16" fill="#64748B" text-anchor="middle">e = vBl（親指・人差し指・中指が互いに直角）</text>
+</svg>
