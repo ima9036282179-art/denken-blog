@@ -335,9 +335,10 @@ img { max-width: 100%; height: auto; display: block; }
    ============================================================ */
 .hero-banner {
   background:
-    repeating-linear-gradient(90deg, rgba(255,255,255,0.035) 0 1px, transparent 1px 64px),
-    repeating-linear-gradient(0deg, rgba(255,255,255,0.035) 0 1px, transparent 1px 64px),
-    linear-gradient(155deg, var(--hero-from) 0%, #102A5C 45%, var(--hero-to) 100%);
+    linear-gradient(155deg, rgba(11,18,32,0.86) 0%, rgba(16,42,92,0.74) 45%, rgba(30,58,138,0.8) 100%),
+    url('/denken-blog/images/denki/135306.jpg');
+  background-size: cover;
+  background-position: center 62%;
   padding: 5rem 1.5rem 4.5rem;
   text-align: center;
   position: relative;
