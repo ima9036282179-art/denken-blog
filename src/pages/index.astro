@@ -13,11 +13,15 @@ const categories = [...new Set(posts.map(p => p.data.category).filter(Boolean))]
 const secondaryTags = allTags.filter(t => !categories.includes(t));
 
 const categoryClassMap: Record<string, string> = {
-  '資格・試験':     'cat-drama',
-  '勉強法・独学':   'cat-quotes',
-  '転職・キャリア': 'cat-cast',
-  '年収・待遇':     'cat-history',
-  '現場のリアル':   'cat-analysis',
+  '資格・試験':       'cat-drama',
+  '勉強法・独学':     'cat-quotes',
+  '転職・キャリア':   'cat-cast',
+  '年収・待遇':       'cat-history',
+  '現場のリアル':     'cat-analysis',
+  '科目別攻略':       'cat-character',
+  '学習ログ':         'cat-cast',
+  '試験制度・手続き': 'cat-history',
+  'コラム':           'cat-quotes',
 };
 function catClass(cat?: string) {
   return cat ? (categoryClassMap[cat] ?? 'cat-default') : 'cat-default';
@@ -29,13 +33,33 @@ function excerpt(description: string) {
 
 const featuredPost = posts[0];
 
-const seriesLinks = [
-  { label: '資格・試験',     tag: '資格・試験',     emoji: '📝', desc: '難易度・合格率・制度' },
-  { label: '勉強法・独学',   tag: '勉強法・独学',   emoji: '📚', desc: '合格までのロードマップ' },
-  { label: '転職・キャリア', tag: '転職・キャリア', emoji: '🧭', desc: '資格を活かした転職ガイド' },
-  { label: '年収・待遇',     tag: '年収・待遇',     emoji: '💰', desc: '資格手当・年収相場' },
-  { label: '現場のリアル',   tag: '現場のリアル',   emoji: '🏭', desc: '仕事内容・働き方' },
+// カテゴリのメタ情報（絵文字・説明文）。新しいカテゴリを追加したら
+// ここにも登録すると、ホームの「カテゴリで読む」に反映される。
+const categoryMeta: Record<string, { emoji: string; desc: string }> = {
+  '資格・試験':       { emoji: '📝', desc: '難易度・合格率・制度' },
+  '勉強法・独学':     { emoji: '📚', desc: '合格までのロードマップ' },
+  '科目別攻略':       { emoji: '🧮', desc: '公式・理論を科目別に整理' },
+  '学習ログ':         { emoji: '✍️', desc: '運営者の実際の学習記録' },
+  '転職・キャリア':   { emoji: '🧭', desc: '資格を活かした転職ガイド' },
+  '年収・待遇':       { emoji: '💰', desc: '資格手当・年収相場' },
+  '現場のリアル':     { emoji: '🏭', desc: '仕事内容・働き方' },
+  '試験制度・手続き': { emoji: '🗂️', desc: 'CBT方式・申込みの流れ' },
+  'コラム':           { emoji: '💬', desc: '運営者の所感・意見' },
+};
+const categoryOrder = [
+  '資格・試験', '勉強法・独学', '科目別攻略', '学習ログ',
+  '転職・キャリア', '年収・待遇', '現場のリアル', '試験制度・手続き', 'コラム',
 ];
+const orderedCategories = [
+  ...categoryOrder.filter(c => categories.includes(c)),
+  ...categories.filter(c => !categoryOrder.includes(c)),
+];
+const seriesLinks = orderedCategories.map(cat => ({
+  label: cat,
+  tag: cat,
+  emoji: categoryMeta[cat]?.emoji ?? '📄',
+  desc: categoryMeta[cat]?.desc ?? '',
+}));
 
 const catCounts: Record<string, number> = {};
 for (const s of seriesLinks) {

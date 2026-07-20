@@ -5,9 +5,36 @@ import { getCollection } from 'astro:content';
 const posts = await getCollection('blog');
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 
+const categoryMeta: Record<string, { emoji: string; desc: string }> = {
+  '資格・試験':       { emoji: '📝', desc: '難易度・合格率・制度' },
+  '勉強法・独学':     { emoji: '📚', desc: '合格までのロードマップ' },
+  '科目別攻略':       { emoji: '🧮', desc: '公式・理論を科目別に整理' },
+  '学習ログ':         { emoji: '✍️', desc: '運営者の実際の学習記録' },
+  '転職・キャリア':   { emoji: '🧭', desc: '資格を活かした転職ガイド' },
+  '年収・待遇':       { emoji: '💰', desc: '資格手当・年収相場' },
+  '現場のリアル':     { emoji: '🏭', desc: '仕事内容・働き方' },
+  '試験制度・手続き': { emoji: '🗂️', desc: 'CBT方式・申込みの流れ' },
+  'コラム':           { emoji: '💬', desc: '運営者の所感・意見' },
+};
+const categoryOrder = [
+  '資格・試験', '勉強法・独学', '科目別攻略', '学習ログ',
+  '転職・キャリア', '年収・待遇', '現場のリアル', '試験制度・手続き', 'コラム',
+];
+
+const categorySet = [...new Set(posts.map(p => p.data.category).filter(Boolean))] as string[];
+const orderedCategories = [
+  ...categoryOrder.filter(c => categorySet.includes(c)),
+  ...categorySet.filter(c => !categoryOrder.includes(c)),
+];
+const categoryCounts: Record<string, number> = {};
+for (const cat of orderedCategories) {
+  categoryCounts[cat] = posts.filter(p => p.data.category === cat).length;
+}
+
 const tagMap = new Map<string, number>();
 posts.forEach(post => {
   post.data.tags?.forEach(tag => {
+    if (categorySet.includes(tag)) return; // カテゴリと重複するタグはタグクラウドから除外
     tagMap.set(tag, (tagMap.get(tag) ?? 0) + 1);
   });
 });
@@ -23,20 +50,37 @@ function fontSize(count: number): string {
 }
 ---
 
-<BaseLayout title="タグ一覧">
-  <h1 class="page-heading">タグ一覧</h1>
-  <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:1.5rem;">文字が大きいほど記事数が多いタグです</p>
-  <div class="tag-cloud">
-    {tags.map(([tag, count]) => (
-      <a
-        href={`${base}tags/${tag}/`}
-        class="tag-cloud-item"
-        style={`font-size:${fontSize(count)}`}
-        title={`${count}件`}
-      >
-        {tag}
-        <span style="font-size:0.65em;opacity:0.6;margin-left:0.2em">{count}</span>
+<BaseLayout title="カテゴリ・タグ一覧">
+  <h1 class="page-heading">カテゴリで探す</h1>
+  <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:1.5rem;">読みたいジャンルから記事を探せます</p>
+
+  <div class="series-read-grid" style="margin-bottom:3rem;">
+    {orderedCategories.map(cat => (
+      <a href={`${base}tags/${encodeURIComponent(cat)}/`} class="series-read-card">
+        <span class="series-read-emoji">{categoryMeta[cat]?.emoji ?? '📄'}</span>
+        <span class="series-read-label">{cat}</span>
+        <span class="series-read-count">{categoryCounts[cat]}本</span>
       </a>
     ))}
   </div>
+
+  {tags.length > 0 && (
+    <>
+      <h2 class="page-heading" style="font-size:1.15rem;margin-bottom:0.5rem;">キーワードタグ</h2>
+      <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:1.5rem;">文字が大きいほど記事数が多いタグです</p>
+      <div class="tag-cloud">
+        {tags.map(([tag, count]) => (
+          <a
+            href={`${base}tags/${tag}/`}
+            class="tag-cloud-item"
+            style={`font-size:${fontSize(count)}`}
+            title={`${count}件`}
+          >
+            {tag}
+            <span style="font-size:0.65em;opacity:0.6;margin-left:0.2em">{count}</span>
+          </a>
+        ))}
+      </div>
+    </>
+  )}
 </BaseLayout>
