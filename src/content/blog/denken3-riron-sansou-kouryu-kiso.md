@@ -101,6 +101,13 @@ P = √3 × V₃ × I₃ × cosθ = 1.73 × 200 [V] × 10 [A] × 0.8 ≈ 2,769 [
 <a href="/denken-blog/blog/denken3-riron-seidenki-kiso/" style="display:inline-block;background:var(--accent);color:#fff;padding:0.45rem 1.1rem;border-radius:6px;font-size:0.85rem;font-weight:700;text-decoration:none;">静電気の基礎を読む →</a>
 </div>
 
+<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;margin:1.5rem 0;text-align:center;">
+<span style="display:inline-block;background:var(--accent-warm);color:#fff;font-size:0.65rem;font-weight:700;padding:0.15em 0.6em;border-radius:4px;margin:0 0 0.6rem;letter-spacing:0.05em;">PR</span>
+<p style="font-weight:700;margin:0 0 0.5rem;font-size:0.95rem;">📘 理論科目のフルカラー教科書</p>
+<p style="font-size:0.85rem;color:var(--text-muted);margin:0 0 0.9rem;line-height:1.7;">「みんなが欲しかった！電験三種 理論の教科書&問題集」で、三相交流を含む理論5分野を総復習するのもおすすめです。</p>
+<a href="https://www.amazon.co.jp/dp/4300108811?tag=ima3burukku2-22" rel="nofollow sponsored noopener" target="_blank" style="display:inline-block;background:var(--accent-warm);color:#fff;padding:0.5rem 1.2rem;border-radius:8px;font-size:0.85rem;font-weight:700;text-decoration:none;">理論の教科書&問題集をAmazonで見る →</a>
+</div>
+
 <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;margin:1.5rem 0;">
 <span style="display:inline-block;background:var(--accent-warm);color:#fff;font-size:0.65rem;font-weight:700;padding:0.15em 0.6em;border-radius:4px;margin:0 0 0.6rem;letter-spacing:0.05em;">PR</span>
 <p style="font-weight:700;margin:0 0 0.5rem;font-size:1rem;">🔺 理論5分野を一通り学び終えたら、次のステップへ</p>
