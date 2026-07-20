@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1220"/>
+      <stop offset="45%" stop-color="#102A5C"/>
+      <stop offset="100%" stop-color="#1E3A8A"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="15%" cy="25%" r="55%">
+      <stop offset="0%" stop-color="#60A5FA" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#60A5FA" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="88%" cy="70%" r="60%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#2563EB" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="70" height="70" patternUnits="userSpaceOnUse">
+      <path d="M 70 0 L 0 0 0 70" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="700" fill="url(#bg)"/>
+  <rect width="1600" height="700" fill="url(#grid)"/>
+  <rect width="1600" height="700" fill="url(#glow1)"/>
+  <rect width="1600" height="700" fill="url(#glow2)"/>
+  <text x="220" y="480" font-size="420" font-family="'Noto Serif JP', serif" fill="#60A5FA" fill-opacity="0.06" text-anchor="middle">電</text>
+
+  <circle cx="130" cy="130" r="50" fill="#0B1220" fill-opacity="0.3"/>
+  <text x="130" y="150" font-size="50" text-anchor="middle">🔋</text>
+
+  <g transform="translate(1150,370)" stroke="#93C5FD" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- simple circuit loop with resistor -->
+    <path d="M -220,-120 L 220,-120 L 220,120 L -220,120 Z"/>
+    <!-- resistor zigzag on top edge -->
+    <path d="M -60,-120 l 20,-30 l 30,60 l 30,-60 l 30,60 l 30,-60 l 20,30" fill="none"/>
+    <!-- battery symbol on left edge -->
+    <line x1="-220" y1="-40" x2="-220" y2="-15" stroke-width="14"/>
+    <line x1="-220" y1="15" x2="-220" y2="40" stroke-width="6"/>
+  </g>
+  <text x="1150" y="560" font-size="30" font-weight="900" fill="#DBEAFE" text-anchor="middle">V = IR</text>
+</svg>
