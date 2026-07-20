@@ -9,6 +9,8 @@ const posts = (await getCollection('blog')).sort(
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 
 const allTags = [...new Set(posts.flatMap(p => p.data.tags ?? []))];
+const categories = [...new Set(posts.map(p => p.data.category).filter(Boolean))] as string[];
+const secondaryTags = allTags.filter(t => !categories.includes(t));
 
 const categoryClassMap: Record<string, string> = {
   '資格・試験':     'cat-drama',
@@ -97,10 +99,20 @@ for (const s of seriesLinks) {
   <section id="articles">
     <div class="tag-filter" id="tagFilter">
       <button class="filter-btn active" data-tag="all">すべて</button>
-      {allTags.map(tag => (
-        <button class="filter-btn" data-tag={tag}>{tag}</button>
+      {categories.map(cat => (
+        <button class="filter-btn" data-tag={cat}>{cat}</button>
       ))}
     </div>
+    {secondaryTags.length > 0 && (
+      <details class="tag-more">
+        <summary class="tag-more-toggle">キーワードで絞り込む</summary>
+        <div class="tag-filter tag-filter-secondary">
+          {secondaryTags.map(tag => (
+            <button class="filter-btn filter-btn-sm" data-tag={tag}>{tag}</button>
+          ))}
+        </div>
+      </details>
+    )}
 
     <ul class="post-list" id="postList" role="list">
       {posts.map((post, i) => {
