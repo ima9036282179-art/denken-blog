@@ -22,6 +22,8 @@
   --category-text:#075985;
   --hero-from:    #0B1220;
   --hero-to:      #1E3A8A;
+  --accent-warm:       #F0813F;
+  --accent-warm-hover: #DD6C2B;
 }
 
 [data-theme="dark"] {
@@ -41,6 +43,8 @@
   --category-text:#BAE6FD;
   --hero-from:    #020617;
   --hero-to:      #1E3A8A;
+  --accent-warm:       #FB923C;
+  --accent-warm-hover: #FDBA74;
 }
 
 /* ============================================================
@@ -52,6 +56,9 @@
 .cat-history  { --cat-bg: #D1FAE5; --cat-text: #065F46; } /* 史実解説 */
 .cat-analysis { --cat-bg: #EDE9FE; --cat-text: #5B21B6; } /* 考察 */
 .cat-character{ --cat-bg: #FEE2E2; --cat-text: #B91C1C; }
+.cat-teal     { --cat-bg: #CCFBF1; --cat-text: #0F766E; }
+.cat-indigo   { --cat-bg: #E0E7FF; --cat-text: #4338CA; }
+.cat-rose     { --cat-bg: #FCE7F3; --cat-text: #9D174D; }
 .cat-default  { --cat-bg: var(--category-bg); --cat-text: var(--category-text); }
 
 [data-theme="dark"] .cat-drama     { --cat-bg: #450A0A; --cat-text: #FCA5A5; }
@@ -60,6 +67,9 @@
 [data-theme="dark"] .cat-history   { --cat-bg: #052E16; --cat-text: #6EE7B7; }
 [data-theme="dark"] .cat-analysis  { --cat-bg: #2E1065; --cat-text: #C4B5FD; }
 [data-theme="dark"] .cat-character { --cat-bg: #450A0A; --cat-text: #FCA5A5; }
+[data-theme="dark"] .cat-teal      { --cat-bg: #134E4A; --cat-text: #5EEAD4; }
+[data-theme="dark"] .cat-indigo    { --cat-bg: #312E81; --cat-text: #A5B4FC; }
+[data-theme="dark"] .cat-rose      { --cat-bg: #500724; --cat-text: #F9A8D4; }
 
 /* ============================================================
    アニメーション

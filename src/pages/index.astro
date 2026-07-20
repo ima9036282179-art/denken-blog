@@ -18,10 +18,10 @@ const categoryClassMap: Record<string, string> = {
   '転職・キャリア':   'cat-cast',
   '年収・待遇':       'cat-history',
   '現場のリアル':     'cat-analysis',
-  '科目別攻略':       'cat-character',
-  '学習ログ':         'cat-cast',
-  '試験制度・手続き': 'cat-history',
-  'コラム':           'cat-quotes',
+  '科目別攻略':       'cat-teal',
+  '学習ログ':         'cat-indigo',
+  '試験制度・手続き': 'cat-character',
+  'コラム':           'cat-rose',
 };
 function catClass(cat?: string) {
   return cat ? (categoryClassMap[cat] ?? 'cat-default') : 'cat-default';

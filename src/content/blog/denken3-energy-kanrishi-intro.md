@@ -4,7 +4,7 @@ description: "電験三種と近い分野の国家資格「エネルギー管理
 pubDate: 2026-10-04
 category: "資格・試験"
 tags: ["資格・試験", "エネルギー管理士", "電験三種", "キャリアパス"]
-eyecatch: "/denken-blog/images/eyecatch/energy-kanrishi.svg"
+eyecatch: "/denken-blog/images/energy-fude-turbine.jpg"
 ---
 
 電験三種の学習を進めていくと、「電気の基礎」の内容が、実は別の国家資格ともかなり重なっていることに気づく人がいます。それが**エネルギー管理士**です。
@@ -14,6 +14,18 @@ eyecatch: "/denken-blog/images/eyecatch/energy-kanrishi.svg"
 <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.85rem;color:var(--text-muted);">
 📌 本記事は情報提供を目的としています。選任基準・試験制度の詳細は変更される場合があるため、必ず一般財団法人省エネルギーセンター等の公式情報でご確認ください。
 </div>
+
+---
+
+## 運営者自身も、この資格を持っています
+
+実は、このサイトの運営者自身が、電験三種への再挑戦に取り組む以前に、**エネルギー管理士（電気分野）を取得しています。**
+
+![運営者が実際に交付を受けたエネルギー管理士の免状](/denken-blog/images/energy-kanrishi-menjyo.jpg)
+
+<p style="text-align:center;font-size:0.78rem;color:var(--text-muted);margin-top:-1.25rem;">実際に交付されたエネルギー管理士の免状（個人情報部分は付箋で隠しています）。</p>
+
+だからこそ、電験三種の理論科目とエネルギー管理士「電気の基礎」がどれだけ重なっているかを、身をもって実感しています。この記事の内容は、その実体験も踏まえて書いています。
 
 ---
 

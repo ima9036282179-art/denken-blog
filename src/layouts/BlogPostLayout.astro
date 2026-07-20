@@ -19,8 +19,21 @@ const { title, description, pubDate, updatedDate, tags, category, eyecatch } = e
 
 const minutes = readingTime(entry.body);
 const postUrl = Astro.url.href;
-const siteUrl = 'https://ima9036282179-art.github.io/it-tenshoku-blog';
+const siteUrl = 'https://ima9036282179-art.github.io/denken-blog';
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+
+const categoryClassMap: Record<string, string> = {
+  '資格・試験':       'cat-drama',
+  '勉強法・独学':     'cat-quotes',
+  '転職・キャリア':   'cat-cast',
+  '年収・待遇':       'cat-history',
+  '現場のリアル':     'cat-analysis',
+  '科目別攻略':       'cat-teal',
+  '学習ログ':         'cat-indigo',
+  '試験制度・手続き': 'cat-character',
+  'コラム':           'cat-rose',
+};
+const catClass = category ? (categoryClassMap[category] ?? 'cat-default') : 'cat-default';
 
 const formattedDate = pubDate.toLocaleDateString('ja-JP', {
   year: 'numeric', month: 'long', day: 'numeric',
@@ -37,8 +50,8 @@ const articleSchema = JSON.stringify({
   description: description,
   datePublished: pubDate.toISOString(),
   dateModified: (updatedDate ?? pubDate).toISOString(),
-  author: { '@type': 'Person', name: 'エンジニア転職ナビ 運営部', url: `${siteUrl}/` },
-  publisher: { '@type': 'Organization', name: 'エンジニア転職ナビ', url: `${siteUrl}/` },
+  author: { '@type': 'Organization', name: '電験ロードナビ 運営部', url: `${siteUrl}/` },
+  publisher: { '@type': 'Organization', name: '電験ロードナビ', url: `${siteUrl}/` },
   url: postUrl,
   ...(tags?.length ? { keywords: tags.join(', ') } : {}),
 });
@@ -73,9 +86,6 @@ const scored = allPosts
   }))
   .sort((a, b) => b.score - a.score || b.post.data.pubDate.valueOf() - a.post.data.pubDate.valueOf());
 const relatedPosts = scored.slice(0, 3).map(s => s.post);
-
-// 転職ノウハウなど連載カテゴリで「記事一覧」ボタンを表示
-const isEpSeries = category === '転職ノウハウ';
 ---
 
 <BaseLayout title={title} description={description} ogType="article">
@@ -86,7 +96,7 @@ const isEpSeries = category === '転職ノウハウ';
   <article>
     <Breadcrumb items={crumbs} />
     <header class="post-hero">
-      {category && <span class="category-badge">{category}</span>}
+      {category && <span class={`category-badge ${catClass}`}>{category}</span>}
       <h1 class="post-title">{title}</h1>
       <div class="post-meta">
         <time datetime={pubDate.toISOString()}>{formattedDate}</time>
@@ -157,7 +167,7 @@ const isEpSeries = category === '転職ノウハウ';
             : <div class="next-post-img" style="background: linear-gradient(135deg,#450A0A,#7F1D1D);" />
           }
           <div class="next-post-body">
-            {scored[0].post.data.category && <span class="category-badge" style="font-size:0.68rem;">{scored[0].post.data.category}</span>}
+            {scored[0].post.data.category && <span class={`category-badge ${categoryClassMap[scored[0].post.data.category] ?? 'cat-default'}`} style="font-size:0.68rem;">{scored[0].post.data.category}</span>}
             <p class="next-post-title">{scored[0].post.data.title}</p>
             <p class="next-post-desc">{scored[0].post.data.description?.slice(0, 90)}…</p>
           </div>
@@ -180,20 +190,15 @@ const isEpSeries = category === '転職ノウハウ';
             </a>
           ))}
         </div>
-        {isEpSeries && (
-          <div class="series-btn-wrap">
-            <a href={base} class="series-btn">▶ 記事一覧を見る</a>
-          </div>
-        )}
       </section>
     )}
 
     {/* 著者カード */}
     <div class="author-card">
-      <div class="author-card-icon">💻</div>
+      <div class="author-card-icon">⚡</div>
       <div class="author-card-body">
-        <p class="author-card-name">エンジニア転職ナビ 運営部</p>
-        <p class="author-card-bio">複数の開発現場を経験したエンジニア視点で、転職の進め方・スキル・エージェント選びを実体験ベースで発信しています。</p>
+        <p class="author-card-name">電験ロードナビ 運営部</p>
+        <p class="author-card-bio">電験三種の勉強法・難易度・転職ガイド・年収相場を、合格から就職までの道のりに沿って発信。運営者自身も電験三種に再挑戦中です。</p>
         <div class="author-card-links">
           <a href={`${base}about/`} class="author-card-link">運営者情報を見る</a>
         </div>
